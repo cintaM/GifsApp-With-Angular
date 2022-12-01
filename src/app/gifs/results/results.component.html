@@ -1,2 +1,17 @@
-
-   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio doloribus corporis vel dicta sunt sapiente molestiae tempora consequuntur, beatae perferendis non voluptate voluptatem possimus minus velit, ut impedit odit necessitatibus?</p>
+<!-- <ul>
+   <li *ngFor="let gif of results">
+      {{gif.title}}
+   </li>
+</ul> -->
+<div class="row">
+   <div *ngFor="let gif of results" class="col-md-4 col-sm-6">
+      <div class="card">
+         <img [src]="gif.images.downsized_medium.url" 
+         [alt]="gif.title" class="card-img-top"
+         >
+         <div class="card-body">
+             <p class="card-text"> {{gif.title}}</p> 
+         </div>
+      </div>
+   </div>
+</div>
